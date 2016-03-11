@@ -1,0 +1,10 @@
+#!/bin/sh
+BASEDIR=$HOME/gracc-dev/etc
+FILES="logstash-gracc-osg.conf gracc-osg-raw.cfg"
+
+## copy files and strip sensitive information
+for file in $FILES; do
+    sed -e 's/user =.*$/user = "USERNAME"/' \
+        -e 's/password =.*$/password = "PASSWORD"/' \
+        "$BASEDIR/$file" > "./$file"
+done
