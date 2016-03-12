@@ -1,6 +1,6 @@
 #!/bin/sh
 BASEDIR=$HOME/gracc-dev/etc
-FILES="logstash-gracc-osg.conf gracc-osg-raw.cfg logstash-gracc-osg-itb.conf gracc-osg-itb-raw.cfg"
+FILES="logstash-gracc-osg.conf gracc-osg-raw.cfg logstash-gracc-osg-itb.conf gracc-osg-itb-raw.cfg logstash-monitor.conf"
 
 ## copy files and strip sensitive information
 for file in $FILES; do
